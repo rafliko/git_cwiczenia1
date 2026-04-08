@@ -3,3 +3,4 @@
 from vigenere import *
 
 print(vigenere('QWERTY', 'ABC'))
+print(decrypt_vigenere('QXGRUA', 'ABC'))
