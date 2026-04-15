@@ -1,4 +1,7 @@
 def szyfr_cezara(tekst, klucz):
+    if not isinstance(tekst, str) or not isinstance(klucz, int):
+        raise TypeError("zły typ danych")
+
     wynik = ""
     for znak in tekst:
         if znak.isalpha():
