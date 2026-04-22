@@ -33,6 +33,41 @@ def test_modulo_error():
     key = "A"
     assert vigenere(text, key) == "A"
 
+@pytest.mark.parametrize(
+    "text,key,expected",
+    [
+        ("abc", "b", "BCD"),
+        ("abc", "c", "CDE"),
+        ("xyz", "b", "YZA"),
+        ("ABC", "b", "BCD"),
+        ("abc", "B", "BCD"),
+    ],
+    ids=[
+        "shift_1",
+        "shift_2",
+        "wrap_around",
+        "uppercase",
+        "mixed_cases",
 
+    ]
+)
+def test_vigenere_mixed(text, key, expected):
+    assert vigenere(text, key) == expected
+
+
+@pytest.mark.parametrize(
+    "text,key,expected",
+    [
+        ("", "a", ""),
+        ("abc", "", "ABC"),
+
+    ],
+    ids=[
+        "empty_text",
+        "empty_key",
+    ]
+)
+def test_vigenere_cases(text, key, expected):
+    assert vigenere(text, key) == expected
 
 
