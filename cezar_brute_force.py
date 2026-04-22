@@ -9,3 +9,5 @@ def cezar_brute_force(text):
             if l in common_letters:
                 score+=1
         print(f"{szyfr_cezara(text, 26-i)} (Klucz: {i}) (Wynik: {score})")
+
+        # naprawione
