@@ -5,7 +5,7 @@ def vigenere(text, key):
         letter = letter.upper()
         if letter.isalpha():
             shift = ord(key[key_index % len(key)]) - ord('A')
-            new_letter = (ord(letter) - ord('A') + shift) % (ord('Z')-ord('A'))
+            new_letter = (ord(letter) - ord('A') + shift) % (ord('Z')-ord('A') + 1)
             new_letter += ord('A')
             ret += chr(new_letter)
             key_index += 1
