@@ -4,6 +4,7 @@ def szyfr_cezara(tekst, klucz):
 
     wynik = ""
     for znak in tekst:
+        znak = znak.upper()
         if znak.isalpha():
             if znak.isupper():
                 podstawa = ord('A')
