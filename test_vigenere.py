@@ -2,6 +2,7 @@ import pytest
 from decrypt_vigenere import decrypt_vigenere
 from vigenere import vigenere
 
+@pytest.mark.basic
 def test_vigenere_basic():
     text = "COS"
     key = "A"
@@ -32,7 +33,7 @@ def test_modulo_error():
     text = "Z"
     key = "A"
     assert vigenere(text, key) == "A"
-
+@pytest.mark.exceptions
 @pytest.mark.parametrize(
     "text,key,expected",
     [
@@ -56,7 +57,7 @@ def test_modulo_error():
 def test_vigenere_mixed(text, key, expected):
     assert vigenere(text, key) == expected
 
-
+@pytest.mark.extended
 @pytest.mark.parametrize(
     "text,key,expected",
     [
