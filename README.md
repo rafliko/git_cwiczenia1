@@ -1,6 +1,6 @@
 # Projekt kryptograficzny
 
----
+
 
 Progam zawiera:
 - Szyfr cezara
@@ -15,7 +15,7 @@ zależną od powtarzanego hasła (klucza).
 
 ## Funkcjonalności
 
----
+
 
 1. Szyfrowanie i deszyfrowanie tekstu przy użyciu szyfru Cezara.
 2. Szyfrowanie i deszyfrowanie tekstu przy użyciu szyfru Vigenere'a.
@@ -24,18 +24,18 @@ zależną od powtarzanego hasła (klucza).
 
 ## Instalacja
 
----
+
 
 Klonowanie repozytorium [repository](https://github.com/rafliko/git_cwiczenia1).
 
-```
+
 git clone https://github.com/rafliko/git_cwiczenia1.git
 cd git_cwiczenia1
 ```
 
 ## Uruchomienie
 
----
+
 
 ![python logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png)
 
@@ -43,7 +43,7 @@ cd git_cwiczenia1
 
 ## Struktura projektu
 
----
+
 
 - `main.py` - główny plik programu
 - `cezar.py` - implementacja szyfru Cezara
