@@ -38,6 +38,7 @@ def test_modulo_error():
     [
         ("abc", "b", "BCD"),
         ("abc", "c", "CDE"),
+        ("abc", "d", "CDE"),
         ("xyz", "b", "YZA"),
         ("ABC", "b", "BCD"),
         ("abc", "B", "BCD"),
@@ -45,6 +46,7 @@ def test_modulo_error():
     ids=[
         "shift_1",
         "shift_2",
+        "shift_3",
         "wrap_around",
         "uppercase",
         "mixed_cases",
@@ -70,4 +72,41 @@ def test_vigenere_mixed(text, key, expected):
 def test_vigenere_cases(text, key, expected):
     assert vigenere(text, key) == expected
 
+
+
+@pytest.mark.parametrize(
+    "text,shift,expected",
+    [
+        ("cde", "2", "ABC"),
+        ("abc", "3", "XYZ"),
+
+    ],
+    ids=[
+        "decrypt",
+        "decrypt_wrap",
+    ]
+)
+def test_vigenere_decrypt(text, shift, expected):
+    assert decrypt_vigenere(text, shift) == expected
+
+@pytest.fixture
+def key():
+    return "KEY"
+
+@pytest.mark.parametrize(
+    "text,expected",
+    [
+        ("HELLO", "RIJVS"),
+        ("TEST!","DIQD!"),
+        ("A B!","K Z?"),
+
+    ],
+    ids=[
+        "basic",
+        "special_char",
+        "special_char_2",
+    ]
+)
+def test_viginere_decrypt(text,expected, key):
+    assert decrypt_vigenere(text, key) == expected
 
