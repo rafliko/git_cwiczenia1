@@ -28,7 +28,7 @@ zależną od powtarzanego hasła (klucza).
 
 Klonowanie repozytorium [repository](https://github.com/rafliko/git_cwiczenia1).
 
-
+```
 git clone https://github.com/rafliko/git_cwiczenia1.git
 cd git_cwiczenia1
 ```
