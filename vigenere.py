@@ -1,4 +1,16 @@
 def vigenere(text, key):
+    """
+    Syfruje tekst za pomocą szyfru vigenere
+
+    Args:
+        text: tekst do szyfrowania
+        key: liczba przesunieć
+
+    Returns:
+        Zaszyfrowany tekst
+
+    """
+
     key_index = 0
     ret = ""
     for letter in text:
